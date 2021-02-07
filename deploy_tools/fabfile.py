@@ -26,7 +26,8 @@ def _get_latest_source():
 def _update_virtualenv():
     if not exists("virtualenv/bin/pip"):
         run("python3 -m venv virtualenv")
-    run("./virtualenv/bin/pip install -r requirements.txt")
+    run("./virtualenv/bin/pip install -r "
+        "/home/acarnefix/sites/superlists-staging.acarnefix.tech/deploy_tools/requirements.txt")
 
 def _create_or_update_dotenv():
     append(".env", "DJANGO_DEBUG_FALSE=y")
