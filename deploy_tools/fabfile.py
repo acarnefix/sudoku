@@ -2,7 +2,7 @@ import random
 from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
-REPO_URL = "https://github.com/acarnefix/lists.git"
+REPO_URL = "https://github.com/acarnefix/tdd-lists.git"
 BRANCH_NAME = "development"
 HOST = 'superlists.acarnefix.tech'
 
