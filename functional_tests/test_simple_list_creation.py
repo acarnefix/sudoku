@@ -8,7 +8,7 @@ class NewVisitorTest(FunctionalTest):
 
     def test_can_start_a_list_for_one_user(self):
         self.browser.get(self.live_server_url)
-        self.assertIn("Sudoku", self.browser.title)
+        self.assertIn("Lists", self.browser.title)
         header_text = self.browser.find_element_by_tag_name("h1").text
         self.assertIn("Start a new To-Do list", header_text)
 
