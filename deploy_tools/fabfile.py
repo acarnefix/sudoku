@@ -2,11 +2,13 @@ import random
 from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
-REPO_URL = "https://github.com/acarnefix/sudoku.git"
+REPO_URL = "https://github.com/acarnefix/lists.git"
 BRANCH_NAME = "development"
+HOST = 'superlists.acarnefix.tech'
 
 def deploy():
-    site_folder = f"/home/{env.user}/sites/{env.host}"
+    # site_folder = f"/home/{env.user}/sites/{env.host}"
+    site_folder = f"/home/{env.user}/sites/{HOST}"
     run(f"mkdir -p {site_folder}")
     with cd(site_folder):
         _get_latest_source()
@@ -30,7 +32,8 @@ def _update_virtualenv():
 
 def _create_or_update_dotenv():
     append(".env", "DJANGO_DEBUG_FALSE=y")
-    append(".env", f"SITENAME={env.host}")
+    # append(".env", f"SITENAME={env.host}")
+    append(".env", f"SITENAME={HOST}")
     current_contents = run("cat .env")
     if "DJANGO_SECRET_KEY" not in current_contents:
         new_secret = "".join(random.SystemRandom().choices("abcdefghijklmnopqrstuvwxyz0123456789", k=50))

@@ -1,7 +1,7 @@
 from django.test import TestCase
 
-from sudoku.forms import DUPLICATE_ITEM_ERROR, EMPTY_ITEM_ERROR, ExistingListItemForm, ItemForm
-from sudoku.models import Item, List
+from lists.forms import DUPLICATE_ITEM_ERROR, EMPTY_ITEM_ERROR, ExistingListItemForm, ItemForm
+from lists.models import Item, List
 
 
 class ItemFormTest(TestCase):

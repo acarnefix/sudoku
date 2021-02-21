@@ -1,5 +1,5 @@
 from django.urls import re_path
-from sudoku import views
+from lists import views
 
 urlpatterns = [
     re_path(r"^new$", views.new_list, name="new_list"),

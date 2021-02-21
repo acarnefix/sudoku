@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
-from sudoku.models import Item, List
+from lists.models import Item, List
 
 
 class ItemModelTest(TestCase):

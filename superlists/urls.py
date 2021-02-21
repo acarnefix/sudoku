@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include
 from django.urls import path
-from sudoku import views as list_views
-from sudoku import urls as list_urls
+from lists import views as list_views
+from lists import urls as list_urls
 
 urlpatterns = [
     path("", list_views.home_page, name="home"),

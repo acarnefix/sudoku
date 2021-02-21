@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.utils.html import escape
 
-from sudoku.forms import DUPLICATE_ITEM_ERROR, EMPTY_ITEM_ERROR, ExistingListItemForm, ItemForm
-from sudoku.models import Item, List
-from sudoku.views import home_page
+from lists.forms import DUPLICATE_ITEM_ERROR, EMPTY_ITEM_ERROR, ExistingListItemForm, ItemForm
+from lists.models import Item, List
+from lists.views import home_page
 
 
 class HomePageTest(TestCase):

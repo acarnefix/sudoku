@@ -1,8 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.shortcuts import redirect, render
 
-from sudoku.forms import ExistingListItemForm, ItemForm
-from sudoku.models import Item, List
+from lists.forms import ExistingListItemForm, ItemForm
+from lists.models import Item, List
 
 def home_page(request):
     return render(request, "home.html", {'form': ItemForm()})
